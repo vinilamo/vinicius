@@ -1,1 +1,31 @@
 
+double sal, re;
+
+            Console.WriteLine("Informe o salário dos 4 funcionários");
+            for (int i = 1; i < 4; i++)
+            {
+                Console.WriteLine("salario do "+ i + "º funcionário: ");
+                sal = double.Parse(Console.ReadLine());
+                if (sal <= 300)
+                {
+                    re = sal * 50 / 100.00;
+                    sal = sal + re;
+                    Console.WriteLine("O salário reajustado é de: " + 
+sal);
+                }
+                else if (sal > 300 && sal < 601)
+                {
+                    re = sal * 30 / 100.00;
+                    sal = sal + re;
+                    Console.WriteLine("O salário reajustado é de: " + 
+sal + " reais");
+                }
+                else
+                {
+                    re = sal * 80 / 100.00;
+                    sal = sal + re;
+                    Console.WriteLine("O salário reajustado é de: " + 
+sal);
+                }
+            }
+            Console.ReadLine();
